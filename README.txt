@@ -1,5 +1,156 @@
 # Web Vulnerability Scanner
 
+# First 
+
+<h1 align="center">
+  <br>
+  <a href="https://github.com/epi052/feroxbuster"><img src="img/logo/default-cropped.png" alt="feroxbuster"></a>
+  <br>
+</h1>
+
+<h4 align="center">A simple, fast, recursive content discovery tool written in Rust</h4>
+
+<p align="center">
+  <a href="https://github.com/epi052/feroxbuster/actions?query=workflow%3A%22CI+Pipeline%22">
+    <img src="https://img.shields.io/github/actions/workflow/status/epi052/feroxbuster/.github/workflows/check.yml?branch=main&logo=github">
+  </a>
+
+  <a href="https://github.com/epi052/feroxbuster/releases">
+    <img src="https://img.shields.io/github/downloads/epi052/feroxbuster/total?label=downloads&logo=github&color=inactive" alt="github downloads">
+  </a>
+
+  <a href="https://github.com/epi052/feroxbuster/commits/master">
+    <img src="https://img.shields.io/github/last-commit/epi052/feroxbuster?logo=github">
+  </a>
+
+  <a href="https://crates.io/crates/feroxbuster">
+    <img src="https://img.shields.io/crates/v/feroxbuster?color=blue&label=version&logo=rust">
+  </a>
+
+  <a href="https://crates.io/crates/feroxbuster">
+    <img src="https://img.shields.io/crates/d/feroxbuster?label=downloads&logo=rust&color=inactive">
+  </a>
+
+  <a href="https://codecov.io/gh/epi052/feroxbuster">
+    <img src="https://codecov.io/gh/epi052/feroxbuster/branch/master/graph/badge.svg" />
+  </a>
+  <!--
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section 
+    [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+  <!-- ALL-CONTRIBUTORS-BADGE:END -->
+  <a href="https://github.com/epi052/feroxbuster/graphs/contributors">
+    <img src="https://img.shields.io/badge/all_contributors-31-orange.svg" />
+  </a>
+
+</p>
+
+![demo](img/demo.gif)
+
+<p align="center">
+  🦀
+  <a href="https://github.com/epi052/feroxbuster/releases">Releases</a> ✨
+  <a href="https://epi052.github.io/feroxbuster-docs/docs/examples/">Example Usage</a> ✨
+  <a href="https://github.com/epi052/feroxbuster/blob/main/CONTRIBUTING.md">Contributing</a> ✨
+  <a href="https://epi052.github.io/feroxbuster-docs/docs/">Documentation</a>
+  🦀
+</p>
+
+---
+
+<h1><p align="center">✨🎉👉 <a href="https://epi052.github.io/feroxbuster-docs/docs/">NEW DOCUMENTATION SITE</a> 👈🎉✨</p></h1>
+
+
+## 🚀 Documentation has **moved** 🚀  
+
+Instead of having a 1300 line `README.md` (sorry...), feroxbuster's documentation has moved to GitHub Pages. The move to hosting documentation on Pages should make it a LOT easier to find the information you're looking for, whatever that may be. Please check it out for anything you need beyond a quick-start. The new documentation can be found [here](https://epi052.github.io/feroxbuster-docs/docs/). 
+
+## 😕 What the heck is a ferox anyway?
+
+Ferox is short for Ferric Oxide. Ferric Oxide, simply put, is rust. The name rustbuster was taken, so I decided on a
+variation. 🤷
+
+## 🤔 What's it do tho?
+
+`feroxbuster` is a tool designed to perform [Forced Browsing](https://owasp.org/www-community/attacks/Forced_browsing).
+
+Forced browsing is an attack where the aim is to enumerate and access resources that are not referenced by the web
+application, but are still accessible by an attacker.
+
+`feroxbuster` uses brute force combined with a wordlist to search for unlinked content in target directories. These
+resources may store sensitive information about web applications and operational systems, such as source code,
+credentials, internal network addressing, etc...
+
+This attack is also known as Predictable Resource Location, File Enumeration, Directory Enumeration, and Resource
+Enumeration.
+
+## ⏳ Quick Start
+
+This section will cover the minimum amount of information to get up and running with feroxbuster. Please refer the the [documentation](https://epi052.github.io/feroxbuster-docs/docs/), as it's much more comprehensive.
+
+### 💿 Installation
+
+There are quite a few other [installation methods](https://epi052.github.io/feroxbuster-docs/docs/installation/), but these snippets should cover the majority of users. 
+
+#### Kali 
+
+If you're using kali, this is the preferred install method. Installing from the repos adds a [**ferox-config.toml**](https://epi052.github.io/feroxbuster-docs/docs/configuration/ferox-config-toml/) in `/etc/feroxbuster/`, adds command completion for bash, fish, and zsh, includes a man page entry, and installs `feroxbuster` itself. 
+
+```
+sudo apt update && sudo apt install -y feroxbuster
+```
+
+#### Linux (32 and 64-bit) & MacOS
+
+Install to a particular directory
+```
+curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash -s $HOME/.local/bin
+```
+
+Install to current working directory
+```
+curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash
+```
+
+#### MacOS via Homebrew 
+
+```
+brew install feroxbuster
+```
+
+#### Windows x86_64
+
+```
+Invoke-WebRequest https://github.com/epi052/feroxbuster/releases/latest/download/x86_64-windows-feroxbuster.exe.zip -OutFile feroxbuster.zip
+Expand-Archive .\feroxbuster.zip
+.\feroxbuster\feroxbuster.exe -V
+```
+
+#### Windows via Winget
+
+```
+winget install epi052.feroxbuster
+```
+
+#### Windows via Chocolatey
+
+```
+choco install feroxbuster
+```
+
+#### All others 
+
+Please refer the the [documentation](https://epi052.github.io/feroxbuster-docs/docs/).
+
+### Updating feroxbuster (new in v2.9.1)
+
+```
+./feroxbuster --update
+```
+
+## 🧰 Example Usage
+
+Here are a few brief examples to get you started.  Please note, feroxbuster can do a **lot more** than what's listed below.  As a result, there are **many more** examples, with **demonstration gifs** that highlight specific features, in the [documentation](https://epi052.github.io/feroxbuster-docs/docs/).
+
 A web vulnerability scanner using **Nmap** and **Feroxbuster**, built with **Flask** and **Flask-SocketIO**.
 
 ## 🚀 Features
