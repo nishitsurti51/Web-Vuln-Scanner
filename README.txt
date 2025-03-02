@@ -1,68 +1,6 @@
 # Web Vulnerability Scanner
 
-# First 
-
-<h1 align="center">
-  <br>
-  <a href="https://github.com/epi052/feroxbuster"><img src="img/logo/default-cropped.png" alt="feroxbuster"></a>
-  <br>
-</h1>
-
-<h4 align="center">A simple, fast, recursive content discovery tool written in Rust</h4>
-
-<p align="center">
-  <a href="https://github.com/epi052/feroxbuster/actions?query=workflow%3A%22CI+Pipeline%22">
-    <img src="https://img.shields.io/github/actions/workflow/status/epi052/feroxbuster/.github/workflows/check.yml?branch=main&logo=github">
-  </a>
-
-  <a href="https://github.com/epi052/feroxbuster/releases">
-    <img src="https://img.shields.io/github/downloads/epi052/feroxbuster/total?label=downloads&logo=github&color=inactive" alt="github downloads">
-  </a>
-
-  <a href="https://github.com/epi052/feroxbuster/commits/master">
-    <img src="https://img.shields.io/github/last-commit/epi052/feroxbuster?logo=github">
-  </a>
-
-  <a href="https://crates.io/crates/feroxbuster">
-    <img src="https://img.shields.io/crates/v/feroxbuster?color=blue&label=version&logo=rust">
-  </a>
-
-  <a href="https://crates.io/crates/feroxbuster">
-    <img src="https://img.shields.io/crates/d/feroxbuster?label=downloads&logo=rust&color=inactive">
-  </a>
-
-  <a href="https://codecov.io/gh/epi052/feroxbuster">
-    <img src="https://codecov.io/gh/epi052/feroxbuster/branch/master/graph/badge.svg" />
-  </a>
-  <!--
-  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section 
-    [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
-  <!-- ALL-CONTRIBUTORS-BADGE:END -->
-  <a href="https://github.com/epi052/feroxbuster/graphs/contributors">
-    <img src="https://img.shields.io/badge/all_contributors-31-orange.svg" />
-  </a>
-
-</p>
-
-![demo](img/demo.gif)
-
-<p align="center">
-  🦀
-  <a href="https://github.com/epi052/feroxbuster/releases">Releases</a> ✨
-  <a href="https://epi052.github.io/feroxbuster-docs/docs/examples/">Example Usage</a> ✨
-  <a href="https://github.com/epi052/feroxbuster/blob/main/CONTRIBUTING.md">Contributing</a> ✨
-  <a href="https://epi052.github.io/feroxbuster-docs/docs/">Documentation</a>
-  🦀
-</p>
-
----
-
-<h1><p align="center">✨🎉👉 <a href="https://epi052.github.io/feroxbuster-docs/docs/">NEW DOCUMENTATION SITE</a> 👈🎉✨</p></h1>
-
-
-## 🚀 Documentation has **moved** 🚀  
-
-Instead of having a 1300 line `README.md` (sorry...), feroxbuster's documentation has moved to GitHub Pages. The move to hosting documentation on Pages should make it a LOT easier to find the information you're looking for, whatever that may be. Please check it out for anything you need beyond a quick-start. The new documentation can be found [here](https://epi052.github.io/feroxbuster-docs/docs/). 
+## 🚀 First Documentation 🚀  
 
 ## 😕 What the heck is a ferox anyway?
 
@@ -150,6 +88,8 @@ Please refer the the [documentation](https://epi052.github.io/feroxbuster-docs/d
 ## 🧰 Example Usage
 
 Here are a few brief examples to get you started.  Please note, feroxbuster can do a **lot more** than what's listed below.  As a result, there are **many more** examples, with **demonstration gifs** that highlight specific features, in the [documentation](https://epi052.github.io/feroxbuster-docs/docs/).
+
+# Web Vulnerability Scanner
 
 A web vulnerability scanner using **Nmap** and **Feroxbuster**, built with **Flask** and **Flask-SocketIO**.
 
