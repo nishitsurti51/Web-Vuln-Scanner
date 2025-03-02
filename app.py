@@ -10,8 +10,8 @@ socketio = SocketIO(app)
 
 # Paths
 NMAP_PATH = r"C:\Program Files (x86)\Nmap\nmap.exe"
-FEROXBUSTER_PATH = r"C:\Users\Yuvraj Singh Saini\.cargo\bin\feroxbuster.exe"
-SECLIST_PATH = r"C:\Users\Yuvraj Singh Saini\SecLists\Discovery\Web-Content\raft-medium-directories.txt"
+FEROXBUSTER_PATH = r"C:\Users\nishi\.cargo\bin\feroxbuster.exe"
+SECLIST_PATH = r"C:\Users\nishi\SecLists-master\Discovery\Web-Content\raft-medium-directories.txt"
 
 processes = []  # List to track running processes
 
